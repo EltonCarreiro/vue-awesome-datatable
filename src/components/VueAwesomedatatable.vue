@@ -32,6 +32,12 @@
         </slot>
       </tr>
     </tbody>
+    <tfoot>
+        <tr style="text-align: left; font-size: 14px;">
+          <td :colspan='visibleColumns.length' v-if="data.length !== filteredData.length">Showing {{ filteredData.length }} of {{ data.length }} registries.</td>
+          <td :colspan='visibleColumns.length' v-else>Showing {{ filteredData.length }} registries.</td>
+        </tr>
+    </tfoot>
   </table>
 </template>
 
