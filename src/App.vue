@@ -15,7 +15,12 @@
       <input type="checkbox" :id='key' :checked='isFiltered(key)' @click="toggleFilter(key)" >
       <label :for="key">{{ key }}</label>
     </div>
-    <vue-awesome-datatable :columns='columns' :data='data' :filter='filter' :filtered-keys='filteredKeys'/>
+    <vue-awesome-datatable
+      :columns='columns'
+      :data='data'
+      :filter='filter'
+      :filtered-keys='filteredKeys'>
+    </vue-awesome-datatable>
   </div>
 </template>
 
@@ -33,7 +38,10 @@ export default {
       data: [
         { product: 'Shampoo', stock: 37 },
         { product: 'Soap', stock: 12 },
-        { product: 'Toilet paper', stock: 45 }
+        { product: 'Toilet paper', stock: 45 },
+        { product: 'Shampoo', stock: 17 },
+        { product: 'Soap', stock: 15 },
+        { product: 'Toilet paper', stock: 63 }
       ],
       filter: '',
       filteredKeys: []
